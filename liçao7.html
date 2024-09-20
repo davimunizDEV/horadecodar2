@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   function somaNumerosInferioresA72() {
+            const numeros = [];
+            let soma = 0;
+
+            // Loop para ler 6 números
+            for (let i = 0; i < 6; i++) {
+                const numero = parseFloat(prompt(`Informe o ${i + 1}º número:`));
+                if (isNaN(numero)) {
+                    alert('Por favor, insira um número válido.');
+                    i--; // Decrementa i para repetir a iteração
+                    continue; // Continua para a próxima iteração
+                }
+                numeros.push(numero); // Adiciona o número ao array
+
+                // Verifica se o número é inferior a 72
+                if (numero < 72) {
+                    soma += numero; // Soma o número se for inferior a 72
+                }
+            }
+
+            // Exibe a soma e os números informados
+            alert(`Números informados: ${numeros.join(', ')}`);
+            alert(`Soma dos números inferiores a 72: ${soma}`);
+        }
+
+
+// Chama a função
+somaNumerosInferioresA72();
+
+    </script>
+</body>
+</html>
